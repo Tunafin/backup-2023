@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var name = 'Apple';
+
+    // function showName() {
+    //   console.log(this.name);
+    // }
+
+    // const person = {
+    //   name: 'Banana',
+    //   showName: showName
+    // };
+
+
+
+    // showName();
+    // person.showName();
+
+    // var anotherFn = person.showName;
+    // anotherFn();
+
+    const myObj = {
+      prop: 'Hello',
+      sayHello: function () {
+        setTimeout(function () {
+          console.log(this); // this 指向全域物件（在瀏覽器中通常是 window）
+        }, 1000);
+      }
+    };
+
+    myObj.sayHello(); // 一秒後輸出 window
+  </script>
+</body>
+
+</html>

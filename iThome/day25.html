@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function greet(a0, a1) {
+      console.log(this.favorite, a0, a1);
+    }
+
+    const myObj = {
+      favorite: 'Apple'
+    }
+    
+    // 正常呼叫函式會輸出「undefined 'Banana' 'Egg'」，其中 this 根據規則指向全域物件
+    greet('Banana', 'Egg'); 
+
+
+    // newGreet 是透過 bind 建立的新函式，它的 this 的值被指定為 myObj
+    const newGreet = greet.bind(myObj);
+    newGreet('Banana', 'Egg');
+  </script>
+</body>
+
+</html>

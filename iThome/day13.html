@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let a = null; // Null 型別
+    // let b; // 未給予初始值，所以它現在是未定義型別，值為 undefined
+    // let c = true; // 布林型別
+    // let d = 123; // 數值型別
+    // let e = 'Hello!'; // 字串型別
+
+    // console.log(typeof a); // 輸出 "object"
+    // console.log(typeof b); // 輸出 "undefined"
+    // console.log(typeof c); // 輸出 "boolean"
+    // console.log(typeof d); // 輸出 "number"
+    // console.log(typeof e); // 輸出 "string"
+
+    let w = new Date();
+    let x = { name: 'John' };
+    let y = [1, 2, 3];
+    let z = function () {
+      console.log('Hello World!');
+    };
+
+    console.log(typeof w); // 輸出 "object"
+    console.log(typeof x); // 輸出 "object"
+    console.log(typeof y); // 輸出 "object"
+    console.log(typeof z); // 輸出 "function"，但實際上它仍屬於物件的一種
+  </script>
+</body>
+
+</html>

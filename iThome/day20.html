@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const a = { x: 123 };
+    a.y = a;
+
+    // 判斷結果為 true
+    if (a === a.y) { }
+
+    console.log(a.x); // 輸出 123
+    console.log(a.y.x); // 輸出 123
+    console.log(a.y.y.x); // 輸出 123
+    // 以上的 a.y 和a.y.y 其實都是拿到 a 的記憶體位置
+  </script>
+</body>
+
+</html>
